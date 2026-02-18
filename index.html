@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Font Tester</title>
+    <link rel="stylesheet" href="style.css">
+    <style id="dynamic-font-style">
+        /* Dynamic font loading - will be populated by script */
+    </style>
+</head>
+<body>
+
+<div class="controls">
+    <h2 class="no-margin-top">Web Font Tester</h2>
+    <p class="help-text">Enter a URL for a <code>.woff2</code>, <code>.ttf</code>, or <code>.otf</code> file to live-test the rendering.</p>
+    
+    <div class="input-group">
+        <input type="text" id="fontUrl" placeholder="Paste Font URL here… (GitHub blob URL is also OK)" value="https://cdn.jsdelivr.net/gh/max32002/bakudaifont@1.48/webfont/Bakudai-Regular.woff2">
+        <button onclick="applyFont()">Apply Font</button>
+    </div>
+    
+    <div id="status" class="text-success">Currently using default: <strong>Bakudai-Regular</strong></div>
+</div>
+
+<div class="canvas">
+    <div class="section">
+        <span class="label">Cantonese / HK Specific</span>
+        <div class="sample-text">
+            麥當勞叔叔噚日喺大窩口捉到一隻紅火蟻。<br>
+            「佢哋喺邊呀？」我哋大家一齊去睇吓。
+        </div>
+    </div>
+
+    <div class="section">
+        <span class="label">Special CJK Ext. Glyphs (Chiron Test)</span>
+        <div class="sample-text">
+            𠄎 𠀖 𠀗 𠀘 𠀙 𠀚 𠀛 𠀜 𠀝 𠀞 𠀟
+        </div>
+    </div>
+
+    <div class="section">
+        <span class="label">Standard Traditional Chinese</span>
+        <div class="sample-text">
+            天地玄黃，宇宙洪荒。日月盈昃，辰宿列張。
+        </div>
+    </div>
+
+    <div class="section">
+        <span class="label">Latin / Numbers / Symbols</span>
+        <div class="sample-text">
+            The quick brown fox jumps over the lazy dog.<br>
+            0123456789 !@#$%^&*()
+        </div>
+    </div>
+
+    <div class="section">
+        <span class="label">Editable Sandbox (Type anything below)</span>
+        <div class="sample-text editable" contenteditable="true">
+            喺度輸入你想測試嘅字...
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>Font Tester Tool</strong></p>
+                <p id="footer-status">Font: System Default</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/VincentTam/WebFontTester" target="_blank" class="github-link">
+                    <svg height="20" viewBox="0 0 16 16" width="20" style="fill: currentColor; vertical-align: middle; margin-right: 5px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    View on GitHub
+                </a>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top">↑ Top</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

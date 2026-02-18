@@ -1,0 +1,182 @@
+/* Initial Default: Bakudai */
+@font-face {
+    font-family: 'TestFont';
+    src: url('https://cdn.jsdelivr.net/gh/max32002/bakudaifont@1.48/webfont/Bakudai-Regular.woff2') format('woff2');
+}
+
+body {
+    font-family: -apple-system, system-ui, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin: 0;
+    padding: 20px;
+}
+
+.controls {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #dee2e6;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+input[type="text"]:focus {
+    border-color: #0d6efd;
+    outline: none;
+}
+
+button {
+    padding: 10px 25px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #0b5ed7;
+}
+
+.canvas {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #dee2e6;
+    /* This applies the font to the whole results area */
+    font-family: 'TestFont', sans-serif;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.label {
+    display: block;
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6c757d;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.sample-text {
+    font-size: 2rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.editable {
+    padding: 15px;
+    background: #fff;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    min-height: 50px;
+}
+
+.editable:focus {
+    border-color: #0d6efd;
+    background: #fdfdfd;
+    outline: none;
+}
+
+#status {
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+.site-footer {
+    max-width: 900px;
+    margin: 40px auto 20px;
+    padding: 20px 0;
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+    font-family: sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.github-link {
+    text-decoration: none;
+    color: #212529;
+    font-weight: 500;
+}
+
+.github-link:hover {
+    color: #0d6efd;
+}
+
+.back-to-top {
+    background: none;
+    border: 1px solid #dee2e6;
+    padding: 5px 12px;
+    border-radius: 4px;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background: #f8f9fa;
+    color: #212529;
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Utility classes */
+.no-margin-top {
+    margin-top: 0;
+}
+
+.help-text {
+    font-size: 14px;
+    color: #495057;
+}
+
+.text-success {
+    color: #198754;
+}
+
+.text-danger {
+    color: #dc3545;
+}
